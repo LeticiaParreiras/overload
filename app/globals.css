@@ -12,6 +12,7 @@
   --font-bakbak: "Bakbak One", sans-serif;
   --font-asap: "Asap", sans-serif;
   --font-grape: "Grape Nuts", cursive;
+  --shadow-home: -1px 7px 40px 50px #000000;
 }
 @layer base {
   html {

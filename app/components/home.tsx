@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <>
       <div
-        className="w-[100%] self-stretch h-[900px] relative"
+        className="w-[100%] self-stretch h-[900px] relative shadow-home"
         id="Home"
       >
        

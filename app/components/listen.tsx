@@ -27,12 +27,20 @@ export default function Listen() {
                 className="text-center justify-start text-white text-6xl font-normal font-grape leading-10"
               >
                 <div className="w-64 h-64 xl:w-80 xl:h-80 bg-blend-linear-burn bg-red-700/90 outline outline-[11px] outline-white mb-8 rounded-sm relative">
-                <Image
+                <Image className="z-4"
                 src={`/${song.name}.jpg`}
                 fill
                 priority
                 alt={song.name}
                 />
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                <Image
+                  src="/play.svg"
+                  width={72}
+                  height={72}
+                  alt="play"
+                />
+              </div>
                 </div>
                 {song.name}
               </div>
