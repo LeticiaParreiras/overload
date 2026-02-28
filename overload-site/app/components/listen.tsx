@@ -15,9 +15,9 @@ export default function Listen() {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
       <div
         id="Listen"
-        className="w-full min-h-screen py-12 gap-40 flex flex-col justify-center overflow-hidden"
+        className="w-full min-h-screen py-12 gap-20 flex flex-col justify-center overflow-hidden"
       >
-        <div className="text-center flex-wrap">
+        <div className="flex text-center flex-wrap justify-center">
           <span className="text-red-700 text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px] ">
             LISTEN
           </span>
@@ -30,7 +30,7 @@ export default function Listen() {
             <div
               key={song.name}
               onClick={() => setIsModalOpen(true)}
-              className="text-center justify-start text-white cursor-pointer text-6xl font-normal font-grape leading-10"
+              className="text-center justify-start text-white  text-6xl font-normal font-grape leading-10"
             >
               <div className="w-64 h-64 xl:w-80 xl:h-80 bg-blend-linear-burn bg-red-700/90 outline outline-[11px] outline-white mb-8 rounded-sm relative">
                 <Image

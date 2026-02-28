@@ -8,7 +8,7 @@ export default function About() {
         className="w-full-screen min-h-screen md:h-[900px] px-12 py-24 flex flex-col md:flex-row justify-between items-center overflow-hidden"
       >
         <div className="w-full md:w-[45%] flex flex-col justify-center items-center gap-6 mb-12 md:mb-0">
-          <h1 className="self-stretch text-center justify-start text-red-700 text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px]">
+          <h1 className="text-red-700 md:text-8xl text-7xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px] ">
             ABOUT
           </h1>
           <p className="w-full text-justify text-white  text-lg md:text-2xl font-medium leading-relaxed tracking-wide font-asap">

@@ -19,11 +19,12 @@ export default function Modal({isOpen, onClose}: ModalProps) {
         onClick={onClose} 
       />
       <div
-        className={` w-[672px] h-[300px] px-6 py-40 bg-black z-100 justify-center `}
+        className={`w-[672px] h-[300px] px-6 py-40 bg-black z-100 relative `}
         
       >
-        <div className="relative flex items-start justify-items-end text-right z-20">
-                  <Image src="/play.svg" width={72} height={72} alt="play" />
+        <div className="absolute -top-0 right-0 ">
+                  <button onClick={onClose}
+          className="absolute -top-0 right-0 text-white text-3xl font-bold hover:opacity-60 transition-opacity font-['Bakbak_One'] cursor-pointer">X</button>
                 </div>
       </div>
     </div>
