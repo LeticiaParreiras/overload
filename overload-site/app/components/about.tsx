@@ -20,6 +20,7 @@ export default function About() {
             src="/about.png"
             alt="Foto da Banda"
             fill
+            
             className="object-contain"
           ></Image>
         </div>
