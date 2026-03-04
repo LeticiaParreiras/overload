@@ -26,7 +26,7 @@ export default async function Shows(){
             Tickets
           </a>
         </div>
-      </div>
+      </div> 
       <div className="self-stretch h-px bg-white opacity-40" />
     </div>
                 

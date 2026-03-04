@@ -3,9 +3,9 @@ import { useState } from "react";
 import Image from "next/image";
 import { urlFor } from "../lib/sanity";
 import { IconContext } from "react-icons";
-import { FaSpotify, FaYoutube  } from "react-icons/fa";
-import { SiApplemusic } from "react-icons/si";
-import { MdClose } from "react-icons/md";
+import { SiApplemusic, SiSpotify, SiYoutube } from "react-icons/si";
+import { IoCloseSharp } from "react-icons/io5";
+
 
 
 interface ModalProps {
@@ -29,7 +29,7 @@ export default function Modal({isOpen, onClose, song}: ModalProps) {
       <div
         className={`w-8/10 h-9/10 px-6 bg-black z-100 relative flex flex-col justify-center items-center my-10 gap-3 `}>
       <div className="absolute -top-0 right-0 ">
-                  <button onClick={onClose}className="absolute -top-0 right-0 text-white text-3xl font-bold hover:opacity-60 transition-opacity font-['Bakbak_One'] cursor-pointer"><MdClose /></button>
+                  <button onClick={onClose}className="absolute -top-0 right-0 text-white text-3xl font-bold hover:opacity-60 transition-opacity font-['Bakbak_One'] cursor-pointer"><IoCloseSharp /></button>
         </div>        
         <div className="w-32 h-32 xl:w-64 xl:h-64   relative">
                 <Image className="rounded-[100%]" src={urlFor(song.imageUrl).url()}
@@ -51,10 +51,10 @@ export default function Modal({isOpen, onClose, song}: ModalProps) {
       <IconContext.Provider value={{ color: "white", size:'4em', className:"bg-red-700 p-1 rounded-lg hover:opacity-75 cursor-pointer "}}>
       <div className="flex flex-row gap-8 mt-18">
         <a href={song.spotify} >
-          <FaSpotify />
+          <SiSpotify />
         </a>
       <a href={song.youtube}>
-        <FaYoutube />
+        <SiYoutube />
       </a>
         <a href={song.appleMusic}>
           <SiApplemusic/>

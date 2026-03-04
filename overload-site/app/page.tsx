@@ -3,6 +3,7 @@ import Logo from "./components/home";
 import Menu from "./components/menu";
 import Listen from "./components/listen";
 import Shows from "./components/shows";
+import Contact from "./components/contact";
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <About />
       <Listen/>
       <Shows />
+      <Contact/>
     </>
   );
 }
