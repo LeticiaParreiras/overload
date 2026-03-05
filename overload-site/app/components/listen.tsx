@@ -6,11 +6,11 @@ import { getMusics } from "../function/getMusics";
 import { urlFor } from "../lib/sanity";
 import { FaPlay } from "react-icons/fa";
 import { IconContext } from "react-icons";
-
+import { SanityDocument } from "next-sanity";
 
 export default function Listen() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [songs, setSongs] = useState([]); 
+  const [songs, setSongs] = useState<SanityDocument[]>([]); 
   const [loading, setLoading] = useState(true);
   const [songModal, setSongModal] = useState({})
 
