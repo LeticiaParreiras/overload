@@ -4,6 +4,7 @@ import Menu from "./components/menu";
 import Listen from "./components/listen";
 import Shows from "./components/shows";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <Listen/>
       <Shows />
       <Contact/>
+      <Footer/>
     </>
   );
 }
