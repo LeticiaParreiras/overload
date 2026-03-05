@@ -26,7 +26,7 @@ export default function Listen() {
 
   if (loading)
     return (
-      <div className="text-white text-center py-20">
+      <div className="text-white text-center py-20 font-asap">
         <p>Loading...</p>
       </div>
     );
@@ -41,11 +41,11 @@ export default function Listen() {
         id="Listen"
         className="w-full min-h-screen py-12 gap-20 flex flex-col justify-center overflow-hidden"
       >
-        <div className="flex text-center flex-wrap justify-center">
-          <span className="text-red-700 text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px] ">
+        <div className="flex text-center flex-wrap justify-center text-7xl md:text-8xl font-normal font-['Bakbak_One'] tracking-widest ">
+          <span className="text-red-700 ">
             LISTEN
           </span>
-          <span className="text-white text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px]">
+          <span className="text-white text-7xl md:text-8xl font-normal font-['Bakbak_One'] tracking-widest">
             NOW
           </span>
         </div>
