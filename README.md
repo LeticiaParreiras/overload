@@ -1,4 +1,12 @@
-# Overload
-Uma lading page de uma banda fictícia, utilizando next.js
+#🎸 Overload - Band Landing Page
+Uma landing page dinâmica e performática desenvolvida para a banda ficticia Overload. O projeto une um design moderno a um sistema de gerenciamento de conteúdo (CMS), permitindo que datas de shows e lançamentos musicais sejam atualizados em tempo real sem a necessidade de novos deploys.
 
-[figma do projeto](https://www.figma.com/proto/RyAcuwD7Dh9NFgpyRBJZBn/Landing-Pages?node-id=49-3&m=dev&scaling=min-zoom&content-scaling=fixed&page-id=49%3A2&starting-point-node-id=49%3A3)
+## Ferramentas
+ - Typescript
+ - Next.js
+ - Tailwind CSS
+ - Sanity CMS
+ - Vercel
+   
+# Aceese o projeto
+[Acesse o projeto](https://overload-eta.vercel.app)
