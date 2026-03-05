@@ -15,11 +15,10 @@
   --shadow-home: -1px 7px 40px 50px #000000;
 }
 @layer base {
-  html {
+  :root, html {
     scroll-behavior: smooth !important;
   }
 }
-
 body {
   background: var(--background);
 }

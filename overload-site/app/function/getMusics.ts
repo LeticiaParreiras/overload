@@ -1,7 +1,5 @@
-import Link from "next/link";
-import { type SanityDocument } from "next-sanity";
-
 import { client } from "../sanity/client";
+import { Music } from "../interface/music";
 
 export async function getMusics(){
     const musicQuery = `*[_type == "music"]|order(_updatedAt desc)[0...3]
@@ -11,6 +9,6 @@ export async function getMusics(){
     youtube,
     appleMusic,
     "imageUrl": musicCover.asset}`
-    const musics = await client.fetch<SanityDocument[]>(musicQuery,{})
+    const musics = await client.fetch<Music[]>(musicQuery,{})
     return musics
 }

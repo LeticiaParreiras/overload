@@ -1,22 +1,21 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import { urlFor } from "../lib/sanity";
 import { IconContext } from "react-icons";
 import { SiApplemusic, SiSpotify, SiYoutube } from "react-icons/si";
 import { IoCloseSharp } from "react-icons/io5";
+import { Music } from "../interface/music";
 
 
 
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
-    song: {};
+    song: Music |null;
 }
 export default function Modal({isOpen, onClose, song}: ModalProps) {
-  const [isOpenModal, setIsOpenModal] = useState(isOpen);
 
-  if (!isOpen) return null;
+  if (!isOpen || song==null) return null;
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center px-4 "

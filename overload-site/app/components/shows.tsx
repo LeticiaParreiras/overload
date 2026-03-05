@@ -4,7 +4,7 @@ import { getShows } from "../function/getShows";
 export default async function Shows(){
  const showsList = await getShows();
     return(
-        <div id="Shows" className='justify-start px-12 py-24 min-h-screen'>
+        <div id="Shows" className='justify-start p-12 min-h-screen'>
             <div className="text-center justify-center">
                 <h1 className="text-white text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px]">SHOWS</h1>
             </div>

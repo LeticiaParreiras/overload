@@ -9,9 +9,9 @@ import { SiApplemusic, SiInstagram, SiSpotify, SiTiktok, SiYoutube } from "react
 
 export default function Contact(){
     return(
-        <div id="Contact" className="w-full min-h-screen gap-20 flex flex-col justify-center items-center overflow-hidden flex-wrap">
-            <span className="flex  md:text-8xl  text-7xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px] ">
-                <h1 className="text-red-700">CONTACTS</h1>
+        <div id="Contact" className="w-full min-h-screen max-h-[900px] gap-20 flex flex-col justify-center items-center overflow-hidden flex-wrap">
+            <span className="flex  md:text-8xl  text-7xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px] gap-1">
+                <h1 className="text-red-700">CONTACT</h1>
                 <h1 className="text-white ">US</h1>
             </span>
             <div className="w-full flex flex-col md:flex-row justify-center items-center overflow-hidden px-12 gap-8 ">

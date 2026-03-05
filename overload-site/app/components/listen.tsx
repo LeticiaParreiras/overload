@@ -6,13 +6,14 @@ import { getMusics } from "../function/getMusics";
 import { urlFor } from "../lib/sanity";
 import { FaPlay } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { SanityDocument } from "next-sanity";
+
+import { Music } from "../interface/music";
 
 export default function Listen() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [songs, setSongs] = useState<SanityDocument[]>([]); 
+const [songs, setSongs] = useState<Music[]>([]);
   const [loading, setLoading] = useState(true);
-  const [songModal, setSongModal] = useState({})
+  const [songModal, setSongModal] = useState<Music | null>(null);
 
   
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function Listen() {
           </span>
         </div>
         <div className="flex flex-col md:flex-row flex-wrap justify-center mt-12 items-center gap-32 relative">
-          {songs.map((song) => (
+          {songs.map((song: Music) => (
             <div
               key={song._id}
               onClick={() => {
