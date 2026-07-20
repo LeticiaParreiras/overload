@@ -18,7 +18,7 @@ export default function About() {
         <div className="w-full md:w-[50%] h-[300px] md:h-full relative">
           <Image
             src="/about.png"
-            alt="Foto da Banda"
+            alt="A collage of the bassist and vocalist on stage performing"
             fill
             
             className="object-contain"

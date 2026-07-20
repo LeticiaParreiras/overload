@@ -10,7 +10,7 @@ export default function Logo() {
        
         <Image
           src="/home.webp"
-          alt="Foto da Banda"
+          alt="Overload performing at a concert"
           fill
           priority
           className="object-cover z-0 "
