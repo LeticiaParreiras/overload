@@ -11,34 +11,41 @@ import { Music } from "../interface/music";
 
 export default function Listen() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-const [songs, setSongs] = useState<Music[]>([]);
+  const [songs, setSongs] = useState<Music[]>([]);
   const [loading, setLoading] = useState(true);
   const [songModal, setSongModal] = useState<Music | null>(null);
 
-  
   useEffect(() => {
     async function loadData() {
       const data = await getMusics();
       setSongs(data);
       setLoading(false);
-      console.table(data)
     }
     loadData();
   }, []); // [] significa que executa apenas uma vez
 
-  if (loading) return <div className="text-white text-center py-20"><p>Loading...</p></div>;
+  if (loading)
+    return (
+      <div className="text-white text-center py-20 font-asap">
+        <p>Loading...</p>
+      </div>
+    );
   return (
     <>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} song={songModal}/>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        song={songModal}
+      />
       <div
         id="Listen"
         className="w-full min-h-screen py-12 gap-20 flex flex-col justify-center overflow-hidden"
       >
-        <div className="flex text-center flex-wrap justify-center">
-          <span className="text-red-700 text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px] ">
+        <div className="flex text-center flex-wrap justify-center text-7xl md:text-8xl font-normal font-['Bakbak_One'] tracking-widest ">
+          <span className="text-red-700 ">
             LISTEN
           </span>
-          <span className="text-white text-8xl font-normal font-['Bakbak_One'] leading-[66.24px] tracking-[11.52px]">
+          <span className="text-white text-7xl md:text-8xl font-normal font-['Bakbak_One'] tracking-widest">
             NOW
           </span>
         </div>
@@ -47,8 +54,9 @@ const [songs, setSongs] = useState<Music[]>([]);
             <div
               key={song._id}
               onClick={() => {
-                setIsModalOpen(true)
-                 setSongModal(song)}}
+                setIsModalOpen(true);
+                setSongModal(song);
+              }}
               className="text-center justify-start text-white  text-6xl font-normal font-grape leading-10"
             >
               <div className="w-64 h-64 xl:w-80 xl:h-80 bg-blend-linear-burn bg-red-700/90 outline outline-[11px] outline-white mb-8 rounded-sm relative">
@@ -60,8 +68,14 @@ const [songs, setSongs] = useState<Music[]>([]);
                   alt={song.name}
                 />
                 <div className="absolute inset-0 flex items-center justify-center z-20">
-                  <IconContext.Provider value={{ color: "white", size:'2em', className:"hover:opacity-75 cursor-pointer "}}>
-                  <FaPlay/> 
+                  <IconContext.Provider
+                    value={{
+                      color: "white",
+                      size: "2em",
+                      className: "hover:opacity-75 cursor-pointer ",
+                    }}
+                  >
+                    <FaPlay />
                   </IconContext.Provider>
                 </div>
               </div>
